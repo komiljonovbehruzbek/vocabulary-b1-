@@ -1,0 +1,171 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+  /* Minimum width for table before horizontal scrolling */
+}
+
+.table th,
+.table td {
+  border: 1px solid #e1e1e1;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.table td:first-child {
+  text-align: center;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.table td:nth-child(2),
+.table td:nth-child(3) {
+  font-weight: 600;
+  color: #2980b9;
+}
+
+.table tr:hover {
+  background-color: #f1f9ff;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px 0;
+  }
+
+  .container {
+    width: 98%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  /* Make table rows display as cards on very small screens */
+  .table {
+    min-width: 100%;
+  }
+
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .table td:last-child {
+    border-bottom: none;
+  }
+
+  .table td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+
+  .table td:first-child {
+    text-align: start;
+  }
+}
